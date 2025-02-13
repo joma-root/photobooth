@@ -1,0 +1,154 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+    background: #F3CFC6;
+    /* Soft light blue background */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 350px;
+    /* Optimized for mobile */
+    width: 100%;
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Brand Name */
+.brand-name {
+    margin-bottom: 20px;
+    /* Space below the brand name */
+}
+
+.brand-name h2 {
+    color: #FF69B4;
+    /* Soft pink color */
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: uppercase;
+    /* Optional: Makes it look more like a brand name */
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: scaleX(-1);
+    /* Flip the video horizontally to prevent mirroring */
+    transition: transform 0.3s ease;
+}
+
+video:hover {
+    transform: scaleX(-1) scale(1.02);
+    /* Slight zoom effect on hover */
+}
+
+button {
+    background: #FF69B4;
+    /* Soft pink button */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: #FF1493;
+    /* Darker pink on hover */
+    transform: translateY(-2px);
+}
+
+/* Photo Strip Styles */
+.photo-strip {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.frames-container {
+    display: flex;
+    flex-direction: column;
+    /* Vertical layout */
+    gap: 15px;
+    width: 100%;
+}
+
+.photo-frame {
+    background: white;
+    /* White background */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.photo-frame:hover {
+    transform: scale(1.02);
+    /* Slight zoom effect on hover */
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 200px;
+    /* Fixed height for consistency */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.photo-frame .date {
+    margin-top: 10px;
+    font-size: 14px;
+    color: black;
+    /* Black date color */
+    font-weight: bold;
+}
+
+.download-btn {
+    background: #FF69B4;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn:hover {
+    background: #FF1493;
+    transform: translateY(-2px);
+}

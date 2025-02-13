@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Booth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Brand Name -->
+        <div class="brand-name">
+            <h2>Jomar's Photobooth</h2>
+        </div>
+
+        <!-- Video Feed -->
+        <video id="video" autoplay playsinline></video>
+        <div class="controls">
+            <button id="capture">Take Photo</button>
+        </div>
+        <canvas id="canvas" style="display:none;"></canvas>
+
+        <!-- Photo Strip Container -->
+        <div class="photo-strip" id="photoStrip">
+            <div class="frames-container" id="framesContainer"></div>
+            <button id="downloadAll" class="download-btn" style="display: none;">
+                Download The Image Mga Maaasim
+            </button>
+        </div>
+    </div>
+    <script src="style.js"></script>
+</body>
+
+</html>
