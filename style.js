@@ -3,7 +3,26 @@ const captureButton = document.getElementById('capture');
 const canvas = document.getElementById('canvas');
 const framesContainer = document.getElementById('framesContainer');
 const downloadButton = document.getElementById('downloadAll');
+const landscapePrompt = document.getElementById('landscapePrompt');
 let photoCount = 0;
+
+// Check device orientation
+function checkOrientation() {
+    if (window.innerHeight > window.innerWidth) {
+        // Portrait mode
+        landscapePrompt.style.display = 'flex';
+    } else {
+        // Landscape mode
+        landscapePrompt.style.display = 'none';
+    }
+}
+
+// Listen for orientation changes
+window.addEventListener('resize', checkOrientation);
+window.addEventListener('orientationchange', checkOrientation);
+
+// Initial check
+checkOrientation();
 
 // Camera access
 async function setupCamera() {

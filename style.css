@@ -45,6 +45,7 @@ body {
     /* Optional: Makes it look more like a brand name */
 }
 
+/* Video Feed */
 video {
     width: 100%;
     height: auto;
@@ -61,6 +62,7 @@ video:hover {
     /* Slight zoom effect on hover */
 }
 
+/* Buttons */
 button {
     background: #FF69B4;
     /* Soft pink button */
@@ -151,4 +153,44 @@ button:hover {
 .download-btn:hover {
     background: #FF1493;
     transform: translateY(-2px);
+}
+
+/* Landscape Mode Prompt */
+.landscape-prompt {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landscape-prompt p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Hide prompt in landscape mode */
+@media (orientation: landscape) {
+    .landscape-prompt {
+        display: none !important;
+    }
+}
+
+/* Show prompt in portrait mode */
+@media (orientation: portrait) {
+    .landscape-prompt {
+        display: flex;
+    }
 }
